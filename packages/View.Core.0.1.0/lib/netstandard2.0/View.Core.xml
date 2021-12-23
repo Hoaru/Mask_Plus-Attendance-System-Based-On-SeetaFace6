@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>View.Core</name>
+    </assembly>
+    <members>
+        <member name="T:View.Core.Extensions.DateTimeExtension">
+            <summary>
+            <see cref="T:System.DateTime"/> 扩展类。
+            </summary>
+        </member>
+        <member name="M:View.Core.Extensions.DateTimeExtension.ToUnixTimeStamp(System.DateTime,View.Core.Models.UnixTimeStampUnit)">
+            <summary>
+            将时间转换为 Unix 时间戳
+            </summary>
+            <param name="dateTime">给定的时间</param>
+            <param name="unit">Unix 时间戳单位</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Core.Extensions.DateTimeExtension.IsNull(System.DateTime)">
+            <summary>
+            日期是否为空 或 默认时间(0001-1-1 00:00:00)
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Core.Extensions.DateTimeExtension.IsNullOrOverdue(System.DateTime)">
+            <summary>
+            日期是否为空 或 默认时间(0001-1-1 00:00:00) 或 过期 (即指定的日期是否已经超过了此时此刻)
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="T:View.Core.Extensions.EnumExtension">
+            <summary>
+            枚举扩展
+            </summary>
+        </member>
+        <member name="M:View.Core.Extensions.EnumExtension.Remove``1(System.Enum,``0)">
+            <summary>
+            移除位域枚举中指定的值
+            </summary>
+            <typeparam name="TEnum"></typeparam>
+            <param name="enum"></param>
+            <param name="_enum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Core.Extensions.EnumExtension.ToDescription(System.Enum)">
+            <summary>
+            获取枚举类型的描述。
+            </summary>
+            <param name="enum"></param>
+            <returns>枚举描述信息</returns>
+        </member>
+        <member name="T:View.Core.Extensions.IEntityExtension">
+            <summary>
+            <see cref="T:View.Core.Interfaces.IEntity"/> 扩展类。
+            </summary>
+        </member>
+        <member name="M:View.Core.Extensions.IEntityExtension.ToByteArrayContent(View.Core.Interfaces.IEntity)">
+            <summary>
+            将实体类 <see cref="T:View.Core.Interfaces.IEntity"/> 转换为 基于字节数组的 <see cref="T:System.Net.Http.HttpContent"/> 。
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Core.Extensions.IEntityExtension.ToFormUrlEncodedContent(View.Core.Interfaces.IEntity)">
+            <summary>
+            将实体类 <see cref="T:View.Core.Interfaces.IEntity"/> 转换为 使用 <see langword="application/x-www-form-urlencoded MIME"/>  类型编码的名称/值元组的 <see cref="T:System.Net.Http.HttpContent"/> 。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:View.Core.Extensions.IEntityExtension.ToMultipartContent(View.Core.Interfaces.IEntity)">
+            <summary>
+            将实体类 <see cref="T:View.Core.Interfaces.IEntity"/> 转换为 使用多部分 <see langword="/*"/> 内容类型的 <see cref="T:System.Net.Http.HttpContent"/> 。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:View.Core.Extensions.IEntityExtension.ToMultipartFormDataContent(View.Core.Interfaces.IEntity)">
+            <summary>
+            将实体类 <see cref="T:View.Core.Interfaces.IEntity"/> 转换为 使用 <see langword="multipart/form-data MIME"/>  类型进行编码的 <see cref="T:System.Net.Http.HttpContent"/> 。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:View.Core.Extensions.IEntityExtension.ToStreamContent(View.Core.Interfaces.IEntity)">
+            <summary>
+            将实体类 <see cref="T:View.Core.Interfaces.IEntity"/> 转换为 基于流的 <see cref="T:System.Net.Http.HttpContent"/> 。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:View.Core.Extensions.IEntityExtension.ToStringContent(View.Core.Interfaces.IEntity)">
+            <summary>
+            将实体类 <see cref="T:View.Core.Interfaces.IEntity"/> 转换为 基于字符串的 <see cref="T:System.Net.Http.HttpContent"/> 。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:View.Core.Extensions.IEntityExtension.ToQuery(View.Core.Interfaces.IEntity)">
+            <summary>
+            将实体类 <see cref="T:View.Core.Interfaces.IEntity"/> 转换为 查询字符串。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:View.Core.Extensions.ListExtension">
+            <summary>
+            List 扩展类
+            </summary>
+        </member>
+        <member name="M:View.Core.Extensions.ListExtension.FindRecursion``1(System.Collections.Generic.List{``0},System.Predicate{``0})">
+            <summary>
+            递归查找整个列表中满足条件的项目
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+            <param name="match"></param>
+            <returns></returns>
+        </member>
+        <member name="T:View.Core.Extensions.LongExtension">
+            <summary>
+            <see cref="T:System.Int64"/> 扩展类。
+            </summary>
+        </member>
+        <member name="M:View.Core.Extensions.LongExtension.ToDateTime(System.Int64,View.Core.Models.UnixTimeStampUnit)">
+            <summary> 
+            根据 Unix 时间戳获取 Utc 时间。
+            </summary>  
+            <param name="timeStamp">Unix 时间戳</param>
+            <param name="unit">Unix 时间戳单位</param>
+            <returns>Unix 时间戳的 Utc 时间形式</returns>
+        </member>
+        <member name="T:View.Core.Extensions.StringExtension">
+            <summary>
+            字符串扩展
+            </summary>
+        </member>
+        <member name="M:View.Core.Extensions.StringExtension.IsNullOrEmpty(System.String)">
+            <summary>
+            指示指定的字符串是 <see langword="null"/> 还是 <see cref="F:System.String.Empty"/> 字符串。
+            </summary>
+            <param name="value">指定的字符串</param>
+            <returns>如果参数 <paramref name="value"/> 为 <see langword="null"/> 或 空字符串("")，则为 <see langword="true"/>；否则为 <see langword="false"/>。</returns>
+        </member>
+        <member name="M:View.Core.Extensions.StringExtension.IsNullOrWhiteSpace(System.String)">
+            <summary>
+            指示指定的字符串是 <see langword="null"/> 、空还是仅由空白字符串组成。
+            </summary>
+            <param name="value">指定的字符串</param>
+            <returns>如果参数 <paramref name="value"/> 为 <see langword="null"/> ，空字符串("")或仅由空白字符组成，则为 <see langword="true"/>；否则为 <see langword="false"/>。</returns>
+        </member>
+        <member name="M:View.Core.Extensions.StringExtension.ToDateTime(System.String)">
+            <summary> 
+            根据时间戳字符串获取 Utc时间。
+            </summary>  
+        </member>
+        <member name="T:View.Core.Interfaces.IEntity">
+            <summary>
+            实体类 接口
+            </summary>
+        </member>
+        <member name="T:View.Core.Models.Pagination">
+            <summary>
+            分页标记
+            </summary>
+        </member>
+        <member name="F:View.Core.Models.Pagination._count">
+            <summary>
+            总页码数
+            </summary>
+        </member>
+        <member name="M:View.Core.Models.Pagination.#ctor(System.Int32,System.Int32)">
+            <summary>
+            初始化一个页码标记
+            </summary>
+            <param name="index"></param>
+            <param name="size"></param>
+        </member>
+        <member name="P:View.Core.Models.Pagination.Index">
+            <summary>
+            当前需要的页码
+            <para>默认 1</para>
+            <para><see cref="P:View.Core.Models.Pagination.Index"/>&gt;0</para>
+            </summary>
+        </member>
+        <member name="P:View.Core.Models.Pagination.Count">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:View.Core.Models.Pagination.Size">
+            <summary>
+            每一页的数据量
+            <para>默认 10</para>
+            <para><see cref="P:View.Core.Models.Pagination.Index"/>&gt;=1</para>
+            </summary>
+        </member>
+        <member name="M:View.Core.Models.Pagination.GetResult``1(``0,System.Int32)">
+            <summary>
+            使用结果数据和数据量创建一个分页结果
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data">结果</param>
+            <param name="count">数据总量，不是页码数</param>
+            <returns></returns>
+        </member>
+        <member name="T:View.Core.Models.PaginationResult`1">
+            <summary>
+            包含结果的分页标记
+            </summary>
+        </member>
+        <member name="M:View.Core.Models.PaginationResult`1.#ctor(`0,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            初始化一个包含结果的页码标记
+            </summary>
+            <param name="data">结果数据</param>
+            <param name="index">当前页</param>
+            <param name="Size"></param>
+            <param name="count"></param>
+        </member>
+        <member name="P:View.Core.Models.PaginationResult`1.Data">
+            <summary>
+            结果数据
+            </summary>
+        </member>
+        <member name="T:View.Core.Models.UnixTimeStampUnit">
+            <summary>
+            Unix 时间戳的单位
+            </summary>
+        </member>
+        <member name="F:View.Core.Models.UnixTimeStampUnit.Seconds">
+            <summary>
+            秒
+            </summary>
+        </member>
+        <member name="F:View.Core.Models.UnixTimeStampUnit.Milliseconds">
+            <summary>
+            毫秒
+            </summary>
+        </member>
+        <member name="T:View.Core.Values.DateTimeValue">
+            <summary>
+            日期的默认值
+            </summary>
+        </member>
+        <member name="P:View.Core.Values.DateTimeValue.Null">
+            <summary>
+            new <see cref="T:System.DateTime"/> 的值。
+            </summary>
+        </member>
+        <member name="P:View.Core.Values.DateTimeValue.UnixZero">
+            <summary>
+            Unix 时间戳 0 的值。
+            <para>ISO 8601规范 : 1970-01-01T00:00:00Z</para>
+            </summary>
+        </member>
+        <member name="F:View.Core.Values.DateTimeValue.DateTimeFormat">
+            <summary>
+            通用的时间格式化字符串。
+            <para><see langword="yyyy-MM-dd HH:mm:ss.fffffffzzz"/></para>
+            </summary>
+        </member>
+    </members>
+</doc>

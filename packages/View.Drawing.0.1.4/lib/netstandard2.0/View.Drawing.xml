@@ -1,0 +1,554 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>View.Drawing</name>
+    </assembly>
+    <members>
+        <member name="T:View.Drawing.Extensions.BitmapExtension">
+            <summary>
+            <see cref="T:System.Drawing.Bitmap"/> 扩展方法。
+            </summary>
+        </member>
+        <member name="M:View.Drawing.Extensions.BitmapExtension.To32BGRByteArray(System.Drawing.Bitmap,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            <see cref="T:System.Drawing.Bitmap"/> 转为 4*8bit BGR <see cref="T:System.Byte"/> 数组。
+            </summary>
+            <param name="bitmap">待转换图像</param>
+            <param name="width">图像宽度</param>
+            <param name="height">图像高度</param>
+            <param name="channels">图像通道</param>
+            <returns>图像的 BGR <see cref="T:System.Byte"/> 数组</returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.BitmapExtension.To24BGRByteArray(System.Drawing.Bitmap,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            <see cref="T:System.Drawing.Bitmap"/> 转为 3*8bit BGR <see cref="T:System.Byte"/> 数组。
+            </summary>
+            <param name="bitmap">待转换图像</param>
+            <param name="width">图像宽度</param>
+            <param name="height">图像高度</param>
+            <param name="channels">图像通道</param>
+            <returns>图像的 BGR <see cref="T:System.Byte"/> 数组</returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.BitmapExtension.SetResolution(System.Drawing.Bitmap,System.Single,System.Single)">
+            <summary>
+            设置此 <see cref="T:System.Drawing.Bitmap"/> 的分辨率。
+            <para>可链式调用的 <see cref="M:System.Drawing.Bitmap.SetResolution(System.Single,System.Single)"/> </para>
+            </summary>
+            <param name="bitmap"></param>
+            <param name="xDpi">Bitmap 的水平分辨率 (以"点/英寸"为单位)。</param>
+            <param name="yDpi">Bitmap 的垂直分辨率 (以"点/英寸"为单位)。</param>
+            <returns></returns>
+        </member>
+        <member name="T:View.Drawing.Extensions.GraphicsExtension">
+            <summary>
+            <see cref="T:System.Drawing.Graphics"/> 扩展方法。
+            </summary>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.DrawImageEx(System.Drawing.Graphics,System.Drawing.Image,System.Drawing.Point)">
+            <summary>
+            在指定的位置使用原始物理大小绘制指定的 <see cref="T:System.Drawing.Image"/>。
+            <para>可链式调用的 <see cref="M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.Point)"/></para>
+            </summary>
+            <param name="graphics"></param>
+            <param name="image">要绘制的 Image。</param>
+            <param name="point">Point 结构，它标识所绘制图像的左上角的位置。</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.DrawImageEx(System.Drawing.Graphics,System.Drawing.Image,System.Drawing.Point[])">
+            <summary>
+            在指定位置并按指定形状和大小绘制指定的 <see cref="T:System.Drawing.Image"/>。
+            <para>可链式调用的 <see cref="M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.Point[])"/></para>
+            </summary>
+            <param name="graphics"></param>
+            <param name="image">要绘制的 Image。</param>
+            <param name="destPoints">由三个 Point 结构组成的数据，这三个结构定义一个平行四边形。</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.DrawImageEx(System.Drawing.Graphics,System.Drawing.Image,System.Drawing.PointF)">
+            <summary>
+            在指定的位置使用原始物理大小绘制指定的 <see cref="T:System.Drawing.Image"/>。
+            <para>可链式调用的 <see cref="M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.PointF)"/></para>
+            </summary>
+            <param name="graphics"></param>
+            <param name="image">要绘制的 Image。</param>
+            <param name="point">PointF 结构，它标识所绘制图像的左上角的位置。</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.DrawImageEx(System.Drawing.Graphics,System.Drawing.Image,System.Drawing.PointF[])">
+            <summary>
+            在指定位置并按指定形状和大小绘制指定的 <see cref="T:System.Drawing.Image"/>。
+            <para>可链式调用的 <see cref="M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.PointF[])"/></para>
+            </summary>
+            <param name="graphics"></param>
+            <param name="image">要绘制的 Image。</param>
+            <param name="destPoints">由三个 Point 结构组成的数据，这三个结构定义一个平行四边形。</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.DrawImageEx(System.Drawing.Graphics,System.Drawing.Image,System.Drawing.Rectangle)">
+            <summary>
+            在指定位置并且按指定大小绘制指定的 <see cref="T:System.Drawing.Image"/>。
+            <para>可链式调用的 <see cref="M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.Rectangle)"/></para>
+            </summary>
+            <param name="graphics"></param>
+            <param name="image">要绘制的 Image。</param>
+            <param name="rect">Rectangle 结构，它指定所绘制图像的位置和大小。</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.DrawImageEx(System.Drawing.Graphics,System.Drawing.Image,System.Drawing.RectangleF)">
+            <summary>
+            在指定位置并且按指定大小绘制指定的 <see cref="T:System.Drawing.Image"/>。
+            <para>可链式调用的 <see cref="M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.RectangleF)"/></para>
+            </summary>
+            <param name="graphics"></param>
+            <param name="image">要绘制的 Image。</param>
+            <param name="rect">RectangleF 结构，它指定所绘制图像的位置和大小。</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.DrawImageEx(System.Drawing.Graphics,System.Drawing.Image,System.Single,System.Single)">
+            <summary>
+            在指定的位置使用原始物理大小绘制指定的 <see cref="T:System.Drawing.Image"/>。
+            <para>可链式调用的 <see cref="M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Single,System.Single)"/></para>
+            </summary>
+            <param name="graphics"></param>
+            <param name="image">要绘制的 Image。</param>
+            <param name="x">所绘制图像的左上角的 x 坐标。</param>
+            <param name="y">所绘制图像的左上角的 y 坐标。</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.DrawImageEx(System.Drawing.Graphics,System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            在指定的位置使用原始物理大小绘制指定的 <see cref="T:System.Drawing.Image"/>。
+            <para>可链式调用的 <see cref="M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Int32,System.Int32)"/></para>
+            </summary>
+            <param name="graphics"></param>
+            <param name="image">要绘制的 Image。</param>
+            <param name="x">所绘制图像的左上角的 x 坐标。</param>
+            <param name="y">所绘制图像的左上角的 y 坐标。</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.DrawImageEx(System.Drawing.Graphics,System.Drawing.Image,System.Drawing.Point[],System.Drawing.Rectangle,System.Drawing.GraphicsUnit)">
+            <summary>
+            在指定位置并按指定大小绘制指定的 <see cref="T:System.Drawing.Image"/> 的指定部分。
+            <para>可链式调用的 <see cref="M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.Point[],System.Drawing.Rectangle,System.Drawing.GraphicsUnit)"/></para>
+            </summary>
+            <param name="graphics"></param>
+            <param name="image">要绘制的 Image。</param>
+            <param name="destPoints">由三个 Point 结构组成的数据，这三个结构定义一个平行四边形。</param>
+            <param name="srcRect">Rectangle 结构，它指定 image 对象中要绘制的部分。</param>
+            <param name="srcUnit">GraphicsUnit 枚举的成员，它指定 srcRect 参数所用的度量单位。</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.DrawImageEx(System.Drawing.Graphics,System.Drawing.Image,System.Drawing.PointF[],System.Drawing.RectangleF,System.Drawing.GraphicsUnit)">
+            <summary>
+            在指定位置并按指定大小绘制指定的 <see cref="T:System.Drawing.Image"/> 的指定部分。
+            <para>可链式调用的 <see cref="M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.PointF[],System.Drawing.RectangleF,System.Drawing.GraphicsUnit)"/></para>
+            </summary>
+            <param name="graphics"></param>
+            <param name="image">要绘制的 Image。</param>
+            <param name="destPoints">由三个 Point 结构组成的数据，这三个结构定义一个平行四边形。</param>
+            <param name="srcRect">Rectangle 结构，它指定 image 对象中要绘制的部分。</param>
+            <param name="srcUnit">GraphicsUnit 枚举的成员，它指定 srcRect 参数所用的度量单位。</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.DrawImageEx(System.Drawing.Graphics,System.Drawing.Image,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Drawing.GraphicsUnit)">
+            <summary>
+            在指定位置并按指定大小绘制指定的 <see cref="T:System.Drawing.Image"/> 的指定部分。
+            <para>可链式调用的 <see cref="M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Drawing.GraphicsUnit)"/></para>
+            </summary>
+            <param name="graphics"></param>
+            <param name="image">要绘制的 Image。</param>
+            <param name="destRect">Rectangle 结构，它指定所绘制图像的位置和大小。将图像进行缩放以适合该矩形。</param>
+            <param name="srcRect">Rectangle 结构，它指定 image 对象中要绘制的部分。</param>
+            <param name="srcUnit">GraphicsUnit 枚举的成员，它指定 srcRect 参数所用的度量单位。</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.ClearEx(System.Drawing.Graphics,System.Drawing.Color)">
+            <summary>
+            可链式调用的 <see cref="M:System.Drawing.Graphics.Clear(System.Drawing.Color)"/>。
+            </summary>
+            <param name="graphics"></param>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.SetCompositingMode(System.Drawing.Graphics,System.Drawing.Drawing2D.CompositingMode)">
+            <summary>
+            设置如何将合成图像绘制到此 <see cref="T:System.Drawing.Graphics"/>。
+            <para>默认值为 <see cref="F:System.Drawing.Drawing2D.CompositingMode.SourceOver"/>。</para>
+            </summary>
+            <param name="graphics"></param>
+            <param name="compositingMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.SetCompositingQuality(System.Drawing.Graphics,System.Drawing.Drawing2D.CompositingQuality)">
+            <summary>
+            设置绘制到此 <see cref="T:System.Drawing.Graphics"/> 的合成图像的呈现质量。、
+            <para>默认值为 <see cref="F:System.Drawing.Drawing2D.CompositingQuality.Default"/>。</para>
+            </summary>
+            <param name="graphics"></param>
+            <param name="compositingQuality"></param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.SetInterpolationMode(System.Drawing.Graphics,System.Drawing.Drawing2D.InterpolationMode)">
+            <summary>
+            设置与此  <see cref="T:System.Drawing.Graphics"/> 关联的补插模式。
+            </summary>
+            <param name="graphics"></param>
+            <param name="interpolationMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.SetPixelOffsetMode(System.Drawing.Graphics,System.Drawing.Drawing2D.PixelOffsetMode)">
+            <summary>
+            设置在呈现此  <see cref="T:System.Drawing.Graphics"/> 过程中的像素偏移方式。
+            </summary>
+            <param name="graphics"></param>
+            <param name="pixelOffsetMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.GraphicsExtension.SetSmoothingMode(System.Drawing.Graphics,System.Drawing.Drawing2D.SmoothingMode)">
+            <summary>
+            设置此  <see cref="T:System.Drawing.Graphics"/> 的呈现质量。
+            </summary>
+            <param name="graphics"></param>
+            <param name="smoothingMode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:View.Drawing.Extensions.ImageExtension">
+            <summary>
+            <see cref="T:System.Drawing.Image"/> 扩展。
+            </summary>
+        </member>
+        <member name="M:View.Drawing.Extensions.ImageExtension.ChangeSize(System.Drawing.Image,System.Drawing.Size,System.Boolean)">
+            <summary>
+            按原图宽高比尽可能的将原图高质量的缩放到新的尺寸中。
+            <para>新的图像尺寸不会超过给定的尺寸</para>
+            <para>原图像将会被 <see cref="M:System.Drawing.Image.Dispose"/>；如果想保留原图像，请使用 <paramref name="reserve"/> 参数。</para>
+            </summary>
+            <param name="image"></param>
+            <param name="size"></param>
+            <param name="reserve">是否保留原图像</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.ImageExtension.ChangePixelFormat(System.Drawing.Image,System.Drawing.Imaging.PixelFormat)">
+            <summary>
+            将此 <see cref="T:System.Drawing.Image"/> 中每个像素的颜色数据格式改为指定的颜色数据格式。
+            </summary>
+            <param name="image"></param>
+            <param name="pixelFormat">指定的颜色数据格式。</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.ImageExtension.ChangeQualityAsync(System.Drawing.Image,System.Int32,View.Drawing.Extensions.Models.ImageCodecs,System.Boolean)">
+            <summary>
+            使用 DGI 内置的编码器将图片的质量尽可能的压缩到指定的大小。
+            <para>原图像将会被 <see cref="M:System.Drawing.Image.Dispose"/>；如果想保留原图像，请使用 <paramref name="reserve"/> 参数。</para>
+            </summary>
+            <param name="image"></param>
+            <param name="length">指定的文件大小 ( 单位: <see langword="KB"/> )</param>
+            <param name="codecs">DGI 内置的编码器</param>
+            <param name="reserve">是否保留原图像</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.ImageExtension.ChangeQualityAsync(System.Drawing.Image,System.Int32,System.Drawing.Imaging.ImageCodecInfo,System.Boolean)">
+            <summary>
+            使用指定的编码器将图片的质量尽可能的压缩到指定的大小。
+            <para>原图像将会被 <see cref="M:System.Drawing.Image.Dispose"/>；如果想保留原图像，请使用 <paramref name="reserve"/> 参数。</para>
+            </summary>
+            <param name="image"></param>
+            <param name="length">指定的文件大小 ( 单位: <see langword="KB"/> )</param>
+            <param name="imageCodecInfo">指定的编码器</param>
+            <param name="reserve">是否保留原图像</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.ImageExtension.ReplaceColor(System.Drawing.Image,System.Drawing.Color,System.Drawing.Color,System.Int32)">
+            <summary>
+            将图片的指定颜色替换为另一个颜色
+            </summary>
+            <param name="image">图片</param>
+            <param name="oldColor">待替换的颜色</param>
+            <param name="newColor">替换后的颜色</param>
+            <param name="radius">待替换颜色的偏移范围</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.ImageExtension.ReplaceColor(System.Drawing.Image,System.Drawing.Color,System.Drawing.Color,System.Int32,System.Drawing.Rectangle@)">
+            <summary>
+            将图片的指定颜色替换为另一个颜色
+            </summary>
+            <param name="image">图片</param>
+            <param name="oldColor">待替换的颜色</param>
+            <param name="newColor">替换后的颜色</param>
+            <param name="radius">待替换颜色的偏移范围</param>
+            <param name="cutSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.ImageExtension.InverseColor(System.Drawing.Image)">
+            <summary>
+            将图片的颜色反转
+            </summary>
+            <param name="image"></param>
+            <returns></returns>
+        </member>
+        <member name="T:View.Drawing.Extensions.ImageHandle">
+            <summary>
+            内部使用
+            </summary>
+        </member>
+        <member name="M:View.Drawing.Extensions.ImageHandle.GetCodecInfo(View.Drawing.Extensions.Models.ImageCodecs)">
+            <summary>
+            获取指定名称的 <see cref="T:System.Drawing.Imaging.ImageCodecInfo"/>
+            </summary>
+            <param name="ext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Extensions.ImageHandle.GetQualityParam(System.Int32)">
+            <summary>
+            获取指定的质量参数
+            </summary>
+            <param name="quality">质量，[1-100]之间</param>
+            <returns></returns>
+        </member>
+        <member name="T:View.Drawing.Extensions.Models.ImageCodecs">
+            <summary>
+            编码器名称
+            </summary>
+        </member>
+        <member name="F:View.Drawing.Extensions.Models.ImageCodecs.BMP">
+            <summary>
+            <see langword="BMP"/> 格式
+            </summary>
+        </member>
+        <member name="F:View.Drawing.Extensions.Models.ImageCodecs.JPEG">
+            <summary>
+            <see langword="JPEG"/> 格式
+            </summary>
+        </member>
+        <member name="F:View.Drawing.Extensions.Models.ImageCodecs.GIF">
+            <summary>
+            <see langword="GIF"/> 格式
+            </summary>
+        </member>
+        <member name="F:View.Drawing.Extensions.Models.ImageCodecs.PNG">
+            <summary>
+            <see langword="PNG"/> 格式
+            </summary>
+        </member>
+        <member name="F:View.Drawing.Extensions.Models.ImageCodecs.TIFF">
+            <summary>
+            <see langword="TIFF"/> 格式
+            </summary>
+        </member>
+        <member name="T:View.Drawing.Papers.Paper">
+            <summary>
+            表示纸张的参数
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.A0">
+            <summary>
+            表示 <see langword="A0"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.A1">
+            <summary>
+            表示 <see langword="A1"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.A2">
+            <summary>
+            表示 <see langword="A2"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.A3">
+            <summary>
+            表示 <see langword="A3"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.A4">
+            <summary>
+            表示 <see langword="A4"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.A5">
+            <summary>
+            表示 <see langword="A5"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.A6">
+            <summary>
+            表示 <see langword="A6"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.A7">
+            <summary>
+            表示 <see langword="A7"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.A8">
+            <summary>
+            表示 <see langword="A8"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.A9">
+            <summary>
+            表示 <see langword="A9"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.A10">
+            <summary>
+            表示 <see langword="A10"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.B0">
+            <summary>
+            表示 <see langword="B0"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.B1">
+            <summary>
+            表示 <see langword="B1"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.B2">
+            <summary>
+            表示 <see langword="B2"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.B3">
+            <summary>
+            表示 <see langword="B3"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.B4">
+            <summary>
+            表示 <see langword="B4"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.B5">
+            <summary>
+            表示 <see langword="B5"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.B6">
+            <summary>
+            表示 <see langword="B6"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.B7">
+            <summary>
+            表示 <see langword="B7"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.B8">
+            <summary>
+            表示 <see langword="B8"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.B9">
+            <summary>
+            表示 <see langword="B9"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.B10">
+            <summary>
+            表示 <see langword="B10"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.C0">
+            <summary>
+            表示 <see langword="C0"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.C1">
+            <summary>
+            表示 <see langword="C1"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.C2">
+            <summary>
+            表示 <see langword="C2"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.C3">
+            <summary>
+            表示 <see langword="C3"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.C4">
+            <summary>
+            表示 <see langword="C4"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.C5">
+            <summary>
+            表示 <see langword="C5"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.C6">
+            <summary>
+            表示 <see langword="C6"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.C7">
+            <summary>
+            表示 <see langword="C7"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.C8">
+            <summary>
+            表示 <see langword="C8"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.DL">
+            <summary>
+            表示 <see langword="DL"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.Paper.C7_6">
+            <summary>
+            表示 <see langword="C7/6"/> 纸张的实际尺寸。
+            </summary>
+        </member>
+        <member name="T:View.Drawing.Papers.PaperSize">
+            <summary>
+            表示纸张的尺寸
+            </summary>
+        </member>
+        <member name="F:View.Drawing.Papers.PaperSize.mm2inch">
+            <summary>
+            <see langword="mm"/> 到 <see langword="inch"/> 的转换比例
+            </summary>
+        </member>
+        <member name="M:View.Drawing.Papers.PaperSize.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:View.Drawing.Papers.PaperSize.#ctor(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="P:View.Drawing.Papers.PaperSize.Width">
+            <summary>
+            获取纸张的实际宽度 (单位：毫米)
+            </summary>
+        </member>
+        <member name="P:View.Drawing.Papers.PaperSize.Height">
+            <summary>
+            获取纸张的实际高度 (单位：毫米)
+            </summary>
+        </member>
+        <member name="M:View.Drawing.Papers.PaperSize.GetPixelSize(System.Int32)">
+            <summary>
+            获取指定 DPI 对应的像素尺寸。
+            </summary>
+            <param name="dpi">指定的 DPI</param>
+            <returns></returns>
+        </member>
+        <member name="M:View.Drawing.Papers.PaperSize.GetPixelSize">
+            <summary>
+            获取 DPI=300 时的像素尺寸。
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
