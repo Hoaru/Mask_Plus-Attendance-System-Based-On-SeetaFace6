@@ -18,3 +18,9 @@ above methods and technologies, the requirement analysis, system design, detaile
 of the face attendance system in the scene of wearing masks are carried out; Finally, a "mask +" face attendance 
 system with good user experience is completed, which includes different scene adaptation interaction process and 
 corresponding interface.
+
+Here are some brief introduction of my work:
+- Designed a Face Recognition Attendance System with mask-on under COVID-19.
+- Collected and stored thousands of faces and relevant information in SQL Server.
+- Deployed open-source face recognition algorithm SeetaFace6 with Aforge.NET image vision library in C#.
+- Distributed the software to the college, earned 2500 credits in school ID card.
