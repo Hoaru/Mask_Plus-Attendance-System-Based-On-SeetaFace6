@@ -1,6 +1,6 @@
-# Mask-Attendance-System-Based-On-SeetaFace6
+# Mask_Plus Attendance System Based On SeetaFace6
 
-  With the emergence of new coronal pneumonia COVID-19, wearing masks has gradually become the norm in people's life. 
+With the emergence of new coronal pneumonia COVID-19, wearing masks has gradually become the norm in people's life. 
 The traditional face recognition algorithm needs to provide the whole face image, but affected by the epidemic, when 
 people wear masks, the traditional face recognition algorithm will not be suitable for some specific application 
 scenarios. In late February 2020, the China State Council issued the guidelines for the prevention and control of 
@@ -11,7 +11,7 @@ infection. Therefore, in order to adapt to the current situation of normalizatio
 and facilitate the personnel statistics and monitoring in campus, station, airport and other densely populated 
 transportation hubs, this paper designs and develops a "mask +" face attendance system.
   
-  Specifically, this paper first based on SeetaFace6 open source face recognition algorithm, using its C # language 
+Specifically, this paper first based on SeetaFace6 open source face recognition algorithm, using its C # language 
 package version ViewFaceCore and Visual Studio 2019 platform, concurrently with the help of computer image vision 
 library AForge.NET for calling the camera to read, convert and collect the face image; Then, on the basis of the 
 above methods and technologies, the requirement analysis, system design, detailed design and system implementation 
